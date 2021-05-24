@@ -14,3 +14,68 @@ lunch break : 1:00 PM (for 60 mins)
 tea break : 3:30 PM (for 20 mins)
 windup : 5:30 PM
 
+Why Go?
+
+    Concurrency
+    Performance
+    Scalable (Concurrency)
+    Compiled
+
+    Simplicity 
+        - Only 25 keywords
+        - No classes
+            - No inheritance
+        - Prefer Composition over inheritance
+        - No access modifiers
+            (access is defined by convention)
+        - No Exceptions (only Error)
+            To support Concurrency
+        - No generics
+
+    Built for Concurrency
+        Language features for concurrency
+            go, chan, select, range, close
+        Builtin Scheduler
+        1000s of goroutines can be executed using 1 thread
+
+
+Barry Shwartz
+    Paradox of Choice (TED talk)
+
+        
+
+
+Class
+    template for an object
+
+Object
+    State (struct)
+    Behavior (functions)
+
+Visual Studio Code (http://code.VisualStudio.com)
+goland (commercial)
+
+Data Types
+    bool
+    string
+
+    int
+    int8
+    int16
+    int32
+    int64
+
+    uint
+    uint8
+    int16
+    uint32
+    int64
+
+    float32
+    float64
+
+    complex64 (real float32, imaginary float32)
+    complex128 ( real float64, imaginary float64)
+
+    byte (alias for uint8)
+    rune (alias for int32, represents 1 unicode character)
