@@ -58,4 +58,36 @@ func main() {
 		fmt.Println(sum)
 	*/
 
+	//switch case
+	var newNo int = 21
+	//fmt.Scanf("%d", &no)
+	switch newNo % 2 {
+	case 1:
+		fmt.Printf("newNo %d is an odd number of type %T\n", newNo, newNo)
+	case 0:
+		fmt.Printf("newNo %d is an even number\n", newNo)
+	}
+
+	/*
+		score
+			0 - 3 => "Terrible"
+			4 - 7 => "Not Bad"
+			8 - 9 => "Good"
+			10 => "Excellent"
+			else => "Unknown score"
+	*/
+
+	score := 7
+	switch score {
+	case 0, 1, 2, 3:
+		fmt.Println("Terrible")
+	case 4, 5, 6, 7:
+		fmt.Println("Not bad!")
+	case 8, 9:
+		fmt.Println("Good")
+	case 10:
+		fmt.Println("Excellect")
+	default:
+		fmt.Println("Unknown score")
+	}
 }
