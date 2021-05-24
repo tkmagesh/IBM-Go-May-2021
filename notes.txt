@@ -1,0 +1,16 @@
+We shall commence at 9:35
+
+1. Your Name
+2. Total Experience
+3. Primary Skillset
+4. Experience in Go (if any)
+
+
+
+Schedule
+commence : 9:30 AM
+tea break : 11:00 AM (for 20 mins)
+lunch break : 1:00 PM (for 60 mins)
+tea break : 3:30 PM (for 20 mins)
+windup : 5:30 PM
+
