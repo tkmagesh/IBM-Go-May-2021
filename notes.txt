@@ -90,4 +90,13 @@ functions
         can assign a function to a varible
         can pass a function as an argument to another function
         can return a function as a return value from another function
+
+
+Build a CLI based calculator
+    Display the following menu
+        1. add
+        2. subtract
+        3. multiply
+        4. divide
+        5. exit
         
