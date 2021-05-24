@@ -79,3 +79,6 @@ Data Types
 
     byte (alias for uint8)
     rune (alias for int32, represents 1 unicode character)
+
+strongly typed language
+No implicit type conversion
