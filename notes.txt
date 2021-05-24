@@ -82,3 +82,12 @@ Data Types
 
 strongly typed language
 No implicit type conversion
+
+
+functions
+    can return multiple values (tuple)
+    supports higher order functions (functions as data)
+        can assign a function to a varible
+        can pass a function as an argument to another function
+        can return a function as a return value from another function
+        

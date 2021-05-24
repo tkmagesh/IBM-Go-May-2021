@@ -2,9 +2,11 @@ package main
 
 import "fmt"
 
+/*
 var add func(int, int) int = func(x, y int) int {
 	return x + y
 }
+*/
 
 func main() {
 	x, y := 100, 200
@@ -13,7 +15,9 @@ func main() {
 			return x + y
 		}
 	*/
+	add := getAdder()
 	fmt.Printf("Adding %d and %d results in %d \n", x, y, add(x, y))
+
 	quotient, remainder := divide(70, 8)
 	fmt.Println(quotient, remainder)
 }
@@ -38,4 +42,10 @@ func divide(x, y int) (quotient int, remainder int) {
 	quotient = x / y
 	remainder = x % y
 	return
+}
+
+func getAdder() func(int, int) int {
+	return func(x, y int) int {
+		return x + y
+	}
 }
