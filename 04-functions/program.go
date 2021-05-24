@@ -7,6 +7,14 @@ var add func(int, int) int = func(x, y int) int {
 	return x + y
 }
 */
+func getCounter() func() int {
+	var count int = 0
+
+	return func() int {
+		count++
+		return count
+	}
+}
 
 func main() {
 	x, y := 100, 200
@@ -20,13 +28,38 @@ func main() {
 
 	quotient, remainder := divide(70, 8)
 	fmt.Println(quotient, remainder)
+
+	counter := getCounter()
+	fmt.Println(counter())
+	fmt.Println(counter())
+	fmt.Println(counter())
+	fmt.Println(counter())
+
+	//function composition
+	loggedAdd := getLoggedOperation(add)
+	loggedAdd(200, 300)
+
 }
 
-/*
+func getLoggedOperation(oper func(int, int) int) func(int, int) int {
+	return func(x, y int) int {
+		result := oper(x, y)
+		fmt.Printf("Processing %d and %d & result = %d\n", x, y, result)
+		return result
+	}
+}
+
 func add(x, y int) int {
 	return x + y
 }
-*/
+
+func subtract(x, y int) int {
+	return x - y
+}
+
+func multiple(x, y int) int {
+	return x * y
+}
 
 /*
 func divide(x, y int) (int, int) {
