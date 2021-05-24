@@ -37,7 +37,11 @@ func main() {
 
 	//function composition
 	loggedAdd := getLoggedOperation(add)
-	loggedAdd(200, 300)
+	loggedAdd(200, 300) // => "Operation:Add, Processing 200 and 300 & result = 500"
+
+	//modify the following line accordingly
+	loggedSubtract := getLoggedOperation(subtract)
+	loggedSubtract(100, 50) // => "Operation:Subtract, Processing 100 and 50 & result = 50"
 
 }
 
