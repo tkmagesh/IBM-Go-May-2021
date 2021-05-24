@@ -79,7 +79,10 @@ func main() {
 
 	score := 7
 	switch score {
-	case 0, 1, 2, 3:
+	case 0:
+	case 1:
+	case 2:
+	case 3:
 		fmt.Println("Terrible")
 	case 4, 5, 6, 7:
 		fmt.Println("Not bad!")
@@ -90,4 +93,64 @@ func main() {
 	default:
 		fmt.Println("Unknown score")
 	}
+
+	/*
+		score := 7
+		switch score {
+		case 0, 1, 2, 3:
+			fmt.Println("Terrible")
+		case 4, 5, 6, 7:
+			fmt.Println("Not bad!")
+		case 8, 9:
+			fmt.Println("Good")
+		case 10:
+			fmt.Println("Excellect")
+		default:
+			fmt.Println("Unknown score")
+		}
+	*/
+
+	/*
+		score := 7
+		switch {
+		case score >= 0 && score <= 3:
+			fmt.Println("Terrible")
+		case score >= 4 && score <= 7:
+			fmt.Println("Not bad!")
+		case score >= 8 && score <= 9:
+			fmt.Println("Good")
+		case score == 10:
+			fmt.Println("Excellect")
+		default:
+			fmt.Println("Unknown score")
+		}
+	*/
+
+	n := 4
+	switch n {
+	case 0:
+		fmt.Println("is zero")
+		fallthrough
+	case 1:
+		fmt.Println(" is <= 1")
+		fallthrough
+	case 2:
+		fmt.Println(" is <= 2")
+		fallthrough
+	case 3:
+		fmt.Println(" is <= 3")
+		fallthrough
+	case 4:
+		fmt.Println(" is <= 4")
+		fallthrough
+	case 5:
+		fmt.Println(" is <= 5")
+		fallthrough
+	case 6:
+		fmt.Println(" is <= 6")
+		fallthrough
+	case 7:
+		fmt.Println(" is <= 7")
+	}
+
 }
