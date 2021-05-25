@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
-	"time"
 )
 
 func main() {
@@ -48,15 +46,30 @@ func main() {
 	fmt.Println("names[:3] => ", names[:3])
 	fmt.Println("names[3:] =>", names[3:])
 
-	rand.Seed(int64(time.Now().Second()))
-	for i := 0; i < 20; i++ {
-		fmt.Println(rand.Intn(100))
+	//map
+	cityRanks := map[string]int{
+		"Mysuru":    2,
+		"Bengaluru": 5,
+		"Udupi":     1,
+	}
+	fmt.Println("Rank of Bengalure => ", cityRanks["Bengaluru"])
+	cityRanks["Mangaluru"] = 3
+	fmt.Println(cityRanks)
+
+	for city, rank := range cityRanks {
+		fmt.Printf("City = %s, Rank = %d\n", city, rank)
 	}
 
-	fmt.Println(time.Now())
+	//cityRanks["Chennai"] = 6
+	fmt.Println("Check if Chennai exists")
+	if rank, exists := cityRanks["Chennai"]; exists {
+		fmt.Println("Chennai is ranked at ", rank)
+	} else {
+		fmt.Println("Chennai is not ranked")
+	}
 
-	//generateRandomNos
-	//isPrime
-	//filterPrimeNos
-	//filterEvenNos
+	fmt.Println("After deleting Mysuru")
+	delete(cityRanks, "Mysuru")
+	fmt.Println(cityRanks)
+
 }
