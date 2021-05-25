@@ -37,6 +37,9 @@ func main() {
 	replaceName(names, 0, "Sajid")
 	fmt.Println("After replacing Magesh with Sajid")
 	fmt.Println(names)
+
+	namesPtr := &names
+	fmt.Println((*namesPtr)[0])
 	//slicing
 	/*
 		list[lo : hi] => from lo to hi-1
@@ -76,6 +79,9 @@ func main() {
 	fmt.Println("After deleting Mysuru")
 	delete(cityRanks, "Mysuru")
 	fmt.Println(cityRanks)
+
+	mapPtr := &cityRanks
+	fmt.Println((*mapPtr)["Mangaluru"])
 
 }
 
