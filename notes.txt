@@ -110,6 +110,10 @@ $GOROOT
 $GOPATH
     folter where the application is maintained
     /pkg
+        /mod
+            /github.com
+                /fatih
+                    /color
     /bin
     /src
         /github.com
@@ -117,6 +121,7 @@ $GOPATH
                 /app1
                     /pkg1
                     main.go
+                        import "github.com/fatih/color"
                         import "github.com/tkmagesh/app1/pk1"
                 /app2
                 /app3
