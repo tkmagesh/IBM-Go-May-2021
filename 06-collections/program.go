@@ -34,6 +34,9 @@ func main() {
 	names = append(names, newNames...)
 	fmt.Println(names, len(names))
 
+	replaceName(names, 0, "Sajid")
+	fmt.Println("After replacing Magesh with Sajid")
+	fmt.Println(names)
 	//slicing
 	/*
 		list[lo : hi] => from lo to hi-1
@@ -53,7 +56,9 @@ func main() {
 		"Udupi":     1,
 	}
 	fmt.Println("Rank of Bengalure => ", cityRanks["Bengaluru"])
-	cityRanks["Mangaluru"] = 3
+	//cityRanks["Mangaluru"] = 3
+	fmt.Println("After adding Mangaluru")
+	addCityRank(cityRanks, "Mangaluru", 3)
 	fmt.Println(cityRanks)
 
 	for city, rank := range cityRanks {
@@ -72,4 +77,12 @@ func main() {
 	delete(cityRanks, "Mysuru")
 	fmt.Println(cityRanks)
 
+}
+
+func addCityRank(cityRanks map[string]int, city string, rank int) {
+	cityRanks[city] = rank
+}
+
+func replaceName(names []string, idx int, name string) {
+	names[idx] = name
 }

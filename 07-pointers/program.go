@@ -16,14 +16,22 @@ func main() {
 
 	x, y := 100, 200
 	fmt.Println("Before swapping x and y are ", x, y)
-	swap( /*  */ )
+	swap(&x, &y)
 	fmt.Println("After swapping x and y are ", x, y)
+
+	nos := []int{10, 20, 30}
+	addValue(&nos, 40)
+	fmt.Println(nos) //=> 10, 20, 30, 40
+}
+
+func addValue(nos *[]int, value int) {
+	*nos = append(*nos, value)
 }
 
 func increment(noPtr *int) {
 	*noPtr = *noPtr + 1
 }
 
-func swap( /*  */ ) {
-
+func swap(x, y *int) {
+	*x, *y = *y, *x
 }
