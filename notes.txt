@@ -99,4 +99,25 @@ Build a CLI based calculator
         3. multiply
         4. divide
         5. exit
-        
+
+
+defer
+    - postponing
+
+$GOROOT
+    folder of the go compiler and other binaries
+
+$GOPATH
+    folter where the application is maintained
+    /pkg
+    /bin
+    /src
+        /github.com
+            /tkmagesh
+                /app1
+                    /pkg1
+                    main.go
+                        import "github.com/tkmagesh/app1/pk1"
+                /app2
+                /app3
+
