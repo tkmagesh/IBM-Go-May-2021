@@ -136,3 +136,7 @@ Collection
     Map
         key/value pairs
         
+
+Find out the prime numbers in the 20 random numbers
+import math/rand
+rand.New(50)

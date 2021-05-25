@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func main() {
 
@@ -44,4 +48,15 @@ func main() {
 	fmt.Println("names[:3] => ", names[:3])
 	fmt.Println("names[3:] =>", names[3:])
 
+	rand.Seed(int64(time.Now().Second()))
+	for i := 0; i < 20; i++ {
+		fmt.Println(rand.Intn(100))
+	}
+
+	fmt.Println(time.Now())
+
+	//generateRandomNos
+	//isPrime
+	//filterPrimeNos
+	//filterEvenNos
 }
