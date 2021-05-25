@@ -126,3 +126,13 @@ $GOPATH
                 /app2
                 /app3
 
+
+Collection
+    Array
+        fixed size
+    Slice
+        wrapper for an array
+        varying size
+    Map
+        key/value pairs
+        
