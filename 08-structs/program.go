@@ -21,7 +21,8 @@ func main() {
 	entities.ApplyDiscount(p, 10)
 	fmt.Println(p)
 
-	grapes := entities.PerishableProduct{entities.Product{501, "Grapes", 60, 40, "Food", true}, "2 Days"}
+	//grapes := entities.PerishableProduct{entities.Product{501, "Grapes", 60, 40, "Food", true}, "2 Days"}
+	grapes := entities.NewPerishableProject(501, "Grapes", 60, 40, "Food", "2 Days")
 	fmt.Println(grapes)
 	fmt.Println(grapes.Cost)
 

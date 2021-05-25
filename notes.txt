@@ -140,3 +140,21 @@ Collection
 Find out the prime numbers in the 20 random numbers
 import math/rand
 rand.New(50)
+
+
+Assignment (Day - 2)
+create a collection products
+	write the following functions
+		- add a product to the list (addProduct) (Hardcode the product data, do not write code to accept inputs from the user)
+        
+		- get the index of the given product (indexOf)
+		- check if the give product exists (includes)
+		- check if all the products in the list satisfies the given criteria (all)
+			use cases:
+				are all products costly ? (cost > 50)
+				are all products in stock ?
+				are all the products stationary products ?
+		- check if atleast one product in the list satisfies the given criteria (any)
+			use cases :
+				are there any stationary products?
+				are thery any products not in stock?
