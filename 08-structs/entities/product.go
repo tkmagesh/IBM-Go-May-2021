@@ -9,11 +9,10 @@ type Product struct {
 	Units     int
 	Category  string
 	IsInStock bool
-	dummy     string
 }
 
 func NewProduct(id int, name string, cost float32, units int, category string, isInStock bool) *Product {
-	return &Product{id, name, cost, units, category, isInStock, "Dummy string"}
+	return &Product{id, name, cost, units, category, isInStock}
 }
 
 func (productPtr *Product) ApplyDiscount(discount float32) {

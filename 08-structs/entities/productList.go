@@ -1,15 +1,9 @@
 package entities
 
-import "fmt"
-
 type ProductList []Product
 
-var x = 100
-
 func (productList *ProductList) AddProduct(p *Product) {
-	fmt.Println(p.dummy)
 	*productList = append(*productList, *p)
-	x = x + 1
 }
 
 func (productList ProductList) GetIndex(product Product) int {
@@ -42,3 +36,9 @@ func (productList *ProductList) Any(criteria func(Product) bool) bool {
 	}
 	return false
 }
+
+//implement the sort (by using the sort.Sort() method )
+/*
+	initial implementation should sort the products by id
+	provide implementations for sorting the products by cost, units, category etc
+*/
