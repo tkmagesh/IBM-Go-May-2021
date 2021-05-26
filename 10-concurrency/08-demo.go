@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
 func writeData(ch chan int) {
@@ -18,20 +17,17 @@ func writeData(ch chan int) {
 	fmt.Println("Before writing 40 into the channel")
 	ch <- 40
 	fmt.Println("After writing 40 into the channel")
+	close(ch)
 
 }
 func main() {
 	fmt.Println("Starting the main function")
 	ch := make(chan int, 2)
 	go writeData(ch)
-	time.Sleep(2 * time.Second)
-	fmt.Println("Before reading data from the channel")
-	fmt.Println(<-ch)
-	fmt.Println("After reading data from the channel")
-	fmt.Println("Before reading data from the channel")
-	fmt.Println(<-ch)
-	fmt.Println("After reading data from the channel")
-	fmt.Println("Before reading data from the channel")
-	fmt.Println(<-ch)
-	fmt.Println("After reading data from the channel")
+	for no := range ch {
+		fmt.Println("Before reading data from the channel")
+		fmt.Println(no)
+		fmt.Println("After reading data from the channel")
+	}
+	fmt.Println("Exiting from main function")
 }
