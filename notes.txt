@@ -158,3 +158,26 @@ create a collection products
 			use cases :
 				are there any stationary products?
 				are thery any products not in stock?
+
+
+Interprocess communication
+    Same machine
+        Use Named pipes
+    Across machines
+        Sync
+            sockets
+                http
+                tcp
+        Async
+            queues
+
+
+io
+    Reader
+        Read()
+    Writer
+        Write()
+
+ioutil
+bufio
+
