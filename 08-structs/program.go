@@ -36,10 +36,10 @@ func main() {
 	productList.AddProduct(entities.NewProduct(104, "Chart", 70, 87, "Stationary", false))
 
 	fmt.Println(productList)
-	idx := productList.GetIndex(entities.Product{103, "Ink", 20, 76, "Stationary", true})
+	idx := productList.GetIndex(*entities.NewProduct(103, "Ink", 20, 76, "Stationary", true))
 	fmt.Println(idx)
 
-	includes := productList.Includes(entities.Product{101, "Pen", 10, 100, "Stationary", true})
+	includes := productList.Includes(*entities.NewProduct(101, "Pen", 10, 100, "Stationary", true))
 	fmt.Println(includes)
 
 	allCheck := productList.All(costlyCheck)

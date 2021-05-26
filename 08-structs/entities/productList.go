@@ -1,9 +1,15 @@
 package entities
 
+import "fmt"
+
 type ProductList []Product
 
+var x = 100
+
 func (productList *ProductList) AddProduct(p *Product) {
+	fmt.Println(p.dummy)
 	*productList = append(*productList, *p)
+	x = x + 1
 }
 
 func (productList ProductList) GetIndex(product Product) int {
