@@ -46,7 +46,7 @@ func (r Rectangle) String() string {
 	return fmt.Sprintf("Rectangle : Height = %v, Width = %v", r.Height, r.Width)
 }
 
-func (shape ShapeWithArea) printArea() {
+func printArea(shape ShapeWithArea) {
 	fmt.Println(shape.Area())
 }
 
