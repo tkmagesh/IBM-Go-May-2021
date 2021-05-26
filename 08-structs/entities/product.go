@@ -22,3 +22,7 @@ func (productPtr *Product) ApplyDiscount(discount float32) {
 func (productPtr *Product) Print() {
 	fmt.Println("Product - ", productPtr)
 }
+
+func (product Product) String() string {
+	return fmt.Sprintf("Id = %d, Name = %s, cost = %f, units = %d, category = %s", product.Id, product.Name, product.Cost, product.Units, product.Category)
+}

@@ -30,11 +30,11 @@ func main() {
 	var productList entities.ProductList
 	p2 := entities.Product{Id: 111, Name: "", Cost: 10, Units: 10, Category: "", IsInStock: true}
 	fmt.Println(p2)
-	productList.AddProduct(entities.NewProduct(100, "Pen", 10, 100, "Stationary", true))
-	productList.AddProduct(entities.NewProduct(101, "Book", 50, 115, "Stationary", true))
-	productList.AddProduct(entities.NewProduct(102, "Pencil", 30, 54, "Stationary", true))
-	productList.AddProduct(entities.NewProduct(103, "Ink", 20, 76, "Stationary", false))
-	productList.AddProduct(entities.NewProduct(104, "Chart", 70, 87, "Stationary", false))
+	productList.AddProduct(entities.NewProduct(105, "Pen", 10, 100, "Stationary", true))
+	productList.AddProduct(entities.NewProduct(102, "Book", 50, 115, "Stationary", true))
+	productList.AddProduct(entities.NewProduct(101, "Pencil", 30, 54, "Stationary", true))
+	productList.AddProduct(entities.NewProduct(104, "Ink", 20, 76, "Stationary", false))
+	productList.AddProduct(entities.NewProduct(103, "Chart", 70, 87, "Stationary", false))
 
 	fmt.Println(productList)
 	idx := productList.GetIndex(*entities.NewProduct(103, "Ink", 20, 76, "Stationary", true))
@@ -48,6 +48,17 @@ func main() {
 
 	anyCheck := productList.Any(costlyCheck)
 	fmt.Println(anyCheck)
+
+	fmt.Println("====================")
+	fmt.Println(productList)
+
+	fmt.Println("Default Sort")
+	productList.Sort()
+	fmt.Println(productList)
+
+	fmt.Println("Sort By Cost")
+	productList.SortByCost()
+	fmt.Println(productList)
 }
 
 func costlyCheck(p entities.Product) bool {
