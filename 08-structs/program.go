@@ -18,7 +18,8 @@ func main() {
 	p := entities.NewProduct(100, "Pen", 10, 100, "Stationary", true)
 	fmt.Println(p)
 	fmt.Println("After applying 10% discount")
-	entities.ApplyDiscount(p, 10)
+	//entities.ApplyDiscount(p, 10)
+	p.ApplyDiscount(10)
 	fmt.Println(p)
 
 	//grapes := entities.PerishableProduct{entities.Product{501, "Grapes", 60, 40, "Food", true}, "2 Days"}
@@ -26,4 +27,28 @@ func main() {
 	fmt.Println(grapes)
 	fmt.Println(grapes.Cost)
 
+	var productList entities.ProductList
+
+	productList.AddProduct(entities.NewProduct(100, "Pen", 10, 100, "Stationary", true))
+	productList.AddProduct(entities.NewProduct(101, "Book", 50, 115, "Stationary", true))
+	productList.AddProduct(entities.NewProduct(102, "Pencil", 30, 54, "Stationary", true))
+	productList.AddProduct(entities.NewProduct(103, "Ink", 20, 76, "Stationary", false))
+	productList.AddProduct(entities.NewProduct(104, "Chart", 70, 87, "Stationary", false))
+
+	fmt.Println(productList)
+	idx := productList.GetIndex(entities.Product{103, "Ink", 20, 76, "Stationary", true})
+	fmt.Println(idx)
+
+	includes := productList.Includes(entities.Product{101, "Pen", 10, 100, "Stationary", true})
+	fmt.Println(includes)
+
+	allCheck := productList.All(costlyCheck)
+	fmt.Println(allCheck)
+
+	anyCheck := productList.Any(costlyCheck)
+	fmt.Println(anyCheck)
+}
+
+func costlyCheck(p entities.Product) bool {
+	return p.Cost > 50
 }

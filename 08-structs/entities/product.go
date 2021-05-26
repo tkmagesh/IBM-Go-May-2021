@@ -13,6 +13,6 @@ func NewProduct(id int, name string, cost float32, units int, category string, i
 	return &Product{id, name, cost, units, category, isInStock}
 }
 
-func ApplyDiscount(productPtr *Product, discount float32) {
+func (productPtr *Product) ApplyDiscount(discount float32) {
 	productPtr.Cost = productPtr.Cost * ((100 - discount) / 100)
 }
