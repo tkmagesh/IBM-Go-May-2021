@@ -181,3 +181,19 @@ io
 ioutil
 bufio
 
+Day-03 Assignment
+    Create one file (result.txt) that will have the sum of even nos and sum of odd numbers write as following:
+        Sum of even numbers : 4937
+        Sum of odd numbers : 3984
+
+    Data files
+        data1.dat
+        data2.dat
+
+
+func fn(){
+
+}
+
+go fn()
+go fn()
