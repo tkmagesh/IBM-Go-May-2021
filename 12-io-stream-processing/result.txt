@@ -1,0 +1,2 @@
+Sum of even numbers : 6
+Sum of odd numbers : 5
