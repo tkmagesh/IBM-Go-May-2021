@@ -22,4 +22,6 @@ func main() {
 		}
 		conn.Write([]byte(input))
 	}
+
+	//write code to read the messages from the server and print in the console
 }
