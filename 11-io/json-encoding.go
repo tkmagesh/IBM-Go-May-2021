@@ -22,16 +22,14 @@ type Book struct {
 }
 
 func main() {
-	books := []Book{
-		Book{
-			Title:     "My Book",
-			PageCount: 375,
-			ISBN:      "9781784395438",
-			Authors:   []Name{{"Magesh", "Kuppan"}},
-			PublishDate: time.Date(
-				2016, time.July,
-				0, 0, 0, 0, 0, time.UTC),
-		},
+	book := Book{
+		Title:     "My Book",
+		PageCount: 375,
+		ISBN:      "9781784395438",
+		Authors:   []Name{{"Magesh", "Kuppan"}},
+		PublishDate: time.Date(
+			2016, time.July,
+			0, 0, 0, 0, 0, time.UTC),
 	}
 
 	file, err := os.Create("book.dat")
@@ -40,7 +38,7 @@ func main() {
 		return
 	}
 	enc := json.NewEncoder(file)
-	if err := enc.Encode(books); err != nil {
+	if err := enc.Encode(book); err != nil {
 		fmt.Println(err)
 	}
 }

@@ -28,11 +28,11 @@ func main() {
 		return
 	}
 
-	var books []Book
+	var book Book
 	dec := json.NewDecoder(file)
-	if err := dec.Decode(&books); err != nil {
+	if err := dec.Decode(&book); err != nil {
 		fmt.Println(err)
 		return
 	}
-	fmt.Println(books)
+	fmt.Println(book)
 }
