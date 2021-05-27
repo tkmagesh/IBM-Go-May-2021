@@ -202,3 +202,15 @@ web api
     1. gin
     2. mysql
     3. gorm
+
+gRPC
+    http2
+        binary format
+        security default
+        bidirectional communication (suitable realtime communication)
+    protobuf
+
+
+Tools 
+    go get -u google.golang.org/grpc
+    go get -u github.com/golang/protobuf/protoc-gen-go
