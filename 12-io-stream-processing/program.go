@@ -10,6 +10,7 @@ import (
 )
 
 func main() {
+
 	fileWg := &sync.WaitGroup{}
 	processWg := &sync.WaitGroup{}
 	dataCh := make(chan int)
@@ -36,17 +37,20 @@ func source(filename string, out chan int, wg *sync.WaitGroup) {
 	if err != nil {
 		panic(err)
 	}
-	defer f.Close()
+	defer func() {
+		f.Close()
+		wg.Done()
+	}()
 	scanner := bufio.NewScanner(f)
 	for scanner.Scan() {
 		str := scanner.Text()
 		val, err := strconv.Atoi(str)
 		if err != nil {
-			log.Println(err)
+			log.Fatalln(err)
 		}
 		out <- val
 	}
-	wg.Done()
+
 }
 
 func splitter(dataCh chan int, evenCh chan int, oddCh chan int, wg *sync.WaitGroup) {

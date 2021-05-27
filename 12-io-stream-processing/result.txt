@@ -1,2 +1,2 @@
-Sum of even numbers : 6
-Sum of odd numbers : 5
+Odd 326
+Even 180
